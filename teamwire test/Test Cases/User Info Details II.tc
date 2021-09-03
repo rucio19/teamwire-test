@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>User Info Details II</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>302a262c-0c7b-4ec0-a66e-9ae86ead432b</testCaseGuid>
+   <variable>
+      <defaultValue>GlobalVariable.user_id</defaultValue>
+      <description></description>
+      <id>7215e551-ba15-4d0c-ae0e-337942355ec0</id>
+      <masked>false</masked>
+      <name>user_id</name>
+   </variable>
+</TestCaseEntity>
