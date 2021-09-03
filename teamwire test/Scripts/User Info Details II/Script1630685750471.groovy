@@ -20,17 +20,17 @@ import groovy.json.JsonSlurper as JsonSlurper
 import groovy.json.JsonOutput as JsonOutput
 
 // JSON file provided // change path to the local new one
-JsonSlurper js = new JsonSlurper()
-data1 = js.parse(new File('/Users/ruben/Repositoris/Katalon/Teamwire/teamwire test/Data Files/Users_Information/USER_1.json'))
+def slurper1 = new JsonSlurper()
+data1 = slurper1.parse(new File("/Users/ruben/Repositoris/teamwire-test/teamwire test/Data Files/Users_Information/USER_1.json"))
 
 
 // Obtain info about user1
 response = WS.sendRequest(findTestObject('GET/user_info')) 
-data2 = response.getResponseText()
+def slurper2 = new JsonSlurper()
+data2 = slurper2.parseText(response.getResponseBodyContent())
 
 
 // Test if response contains data provided
-WS.verifyMatch(data1, data2, true)
 WS.containsString(data1, data2, true)
 
  
